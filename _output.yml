@@ -1,0 +1,10 @@
+bookdown::gitbook:
+  css: settings/style.css
+  split_bib: yes
+  config:
+    toc:
+      collapse: section
+      after: |
+        </a></li>
+    edit: https://github.com/TobiasRoth/testBDA/edit/master/%s
+    download: pdf

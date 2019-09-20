@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Data Analysis in Ecology with R and Stan</title>
+  <meta name="description" content="This GitHub-book is collection of updates and additional material to the book Bayesian Data Analysis in Ecology Using Linear Models with R, BUGS, and STAN." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Data Analysis in Ecology with R and Stan" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover.jpg" />
+  <meta property="og:description" content="This GitHub-book is collection of updates and additional material to the book Bayesian Data Analysis in Ecology Using Linear Models with R, BUGS, and STAN." />
+  <meta name="github-repo" content="TobiasRoth/BDAEcology" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Analysis in Ecology with R and Stan" />
+  
+  <meta name="twitter:description" content="This GitHub-book is collection of updates and additional material to the book Bayesian Data Analysis in Ecology Using Linear Models with R, BUGS, and STAN." />
+  <meta name="twitter:image" content="images/cover.jpg" />
+
+<meta name="author" content="Fränzi Korner-Nievergelt and Tobias Roth" />
+
+
+<meta name="date" content="2019-09-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="analyses-steps.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="settings/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-this-book"><i class="fa fa-check"></i>Why this book?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-this-book"><i class="fa fa-check"></i>About this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="analyses-steps.html"><a href="analyses-steps.html"><i class="fa fa-check"></i><b>1</b> Data analysis step by step</a><ul>
+<li class="chapter" data-level="1.1" data-path="analyses-steps.html"><a href="analyses-steps.html#step1"><i class="fa fa-check"></i><b>1.1</b> Plausibility of Data</a></li>
+<li class="chapter" data-level="1.2" data-path="analyses-steps.html"><a href="analyses-steps.html#step2"><i class="fa fa-check"></i><b>1.2</b> Relationships</a></li>
+<li class="chapter" data-level="1.3" data-path="analyses-steps.html"><a href="analyses-steps.html#step3"><i class="fa fa-check"></i><b>1.3</b> Data Distribution</a></li>
+<li class="chapter" data-level="1.4" data-path="analyses-steps.html"><a href="analyses-steps.html#step4"><i class="fa fa-check"></i><b>1.4</b> Preparation of Explanatory Variables</a></li>
+<li class="chapter" data-level="1.5" data-path="analyses-steps.html"><a href="analyses-steps.html#step5"><i class="fa fa-check"></i><b>1.5</b> Data Structure</a></li>
+<li class="chapter" data-level="1.6" data-path="analyses-steps.html"><a href="analyses-steps.html#step6"><i class="fa fa-check"></i><b>1.6</b> Define Prior Distributions</a></li>
+<li class="chapter" data-level="1.7" data-path="analyses-steps.html"><a href="analyses-steps.html#step7"><i class="fa fa-check"></i><b>1.7</b> Fit the Model</a></li>
+<li class="chapter" data-level="1.8" data-path="analyses-steps.html"><a href="analyses-steps.html#step8"><i class="fa fa-check"></i><b>1.8</b> Check Model</a></li>
+<li class="chapter" data-level="1.9" data-path="analyses-steps.html"><a href="analyses-steps.html#step9"><i class="fa fa-check"></i><b>1.9</b> Model Uncertainty</a></li>
+<li class="chapter" data-level="1.10" data-path="analyses-steps.html"><a href="analyses-steps.html#step10"><i class="fa fa-check"></i><b>1.10</b> Draw Conclusions</a></li>
+<li class="chapter" data-level="" data-path="analyses-steps.html"><a href="analyses-steps.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
+</ul></li>
+<li class="divider"></li>
+</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis in Ecology with R and Stan</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Data Analysis in Ecology with R and Stan</h1>
+<p class="author"><em>Fränzi Korner-Nievergelt and Tobias Roth</em></p>
+<p class="date"><em>2019-09-20</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<div id="why-this-book" class="section level2 unnumbered">
+<h2>Why this book?</h2>
+<p>In 2015, we wrote a statistics book for Master/PhD level Bayesian data analyses in ecology <span class="citation">(Korner-Nievergelt et al. <a href="#ref-KornerNievergelt2015" role="doc-biblioref">2015</a>)</span>. You can order it <a href="https://www.elsevier.com/books/bayesian-data-analysis-in-ecology-using-linear-models-with-r-bugs-and-stan/korner-nievergelt/978-0-12-801370-0">here</a>. People seemed to like it (e.g. <span class="citation">(Harju <a href="#ref-Harju2016" role="doc-biblioref">2016</a>)</span>). Since then, two parallel processes happen. First, we learn more and we become more confident in what we do, or what we do not, and why we do what we do. Second, several really clever people develop software that broaden the spectrum of ecological models that now easily can be applied by ecologists used to work with R. With this e-book, we open the possibility to add new or substantially revised material. In most of the time, it should be in a state that it can be printed and used together with the book as handout for our stats courses.</p>
+</div>
+<div id="about-this-book" class="section level2 unnumbered">
+<h2>About this book</h2>
+<p>We do not copy text from the book into the e-book. Therefore, we refer to the book <span class="citation">(Korner-Nievergelt et al. <a href="#ref-KornerNievergelt2015" role="doc-biblioref">2015</a>)</span> for reading about the basic theory on doing Bayesian data analyses using linear models. However, Chapters 1 to 17 of this dynamic e-book correspond to the book chapters. In each chapter, we may provide updated R-codes and/or additional material. The following chapters contain completely new material that we think may be useful for ecologists.</p>
+<p>While we show the R-code behind most of the analyses, we sometimes choose not to show all the code in the html version of the book. This is particularly the case for some of the illustrations. An intrested reader can always consult the <a href="https://github.com/TobiasRoth/BDAEcology">public GitHub repository</a> with the rmarkdown-files that were used to generate the book.</p>
+</div>
+<div id="how-to-contribute" class="section level2 unnumbered">
+<h2>How to contribute?</h2>
+<p>It is open so that everybody with a <a href="https://github.com">GitHub</a> account can make comments and suggestions for improvement. Readers can contribute in two ways. One way is to add an <a href="https://github.com/TobiasRoth/BDAEcology/issues">issue</a>. The second way is to contribute content directly through the edit button at the top of the page (i.e. a symbol showing a pencil in a square). That button is linked to the rmarkdown source file of each page. You can correct typos or add new text and then submit a <a href="https://help.github.com/articles/about-pull-requests/">GitHub pull request</a>. We try to respond to you as quickly as possible. We are looking forward to your contribution!</p>
+</div>
+<div id="acknowledgments" class="section level2 unnumbered">
+<h2>Acknowledgments</h2>
+<p>We thank <em>Yihui Xie</em> for providing <a href="bhttps://bookdown.org/yihui/bookdown/">bookdown</a> which makes it much fun to write open books such as ours.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Harju2016">
+<p>Harju, S. 2016. “Book review:~Bayesian Data Analysis in Ecology Using Linear Models with R, BUGS, and Stan.” <em>The Journal of Wildlife Management</em> 80: 771.</p>
+</div>
+<div id="ref-KornerNievergelt2015">
+<p>Korner-Nievergelt, F, T Roth, Stefanie von Felten, J Guélat, B Almasi, and P Korner-Nievergelt. 2015. <em>Bayesian Data Analysis in Ecolog Using Linear Models with R, BUGS, and Stan</em>. New York: Elsevier.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="analyses-steps.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/TobiasRoth/testBDA/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
