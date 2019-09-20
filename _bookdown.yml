@@ -1,0 +1,5 @@
+book_filename: "BDAEcology"
+output_dir: "Book_local"
+delete_merged_file: true
+before_chapter_script: ["settings/settings.R"]
+new_session: yes
