@@ -4,6 +4,8 @@ In this chapter we provide a checklist with some guidance for data analysis. How
 
 There is a chance and danger at the same time: we may find interesting results that answer different questions than we asked originally. They may be very exciting and important, however they may be biased. We can report such findings, but we should state that they appeared (more or less by chance) during the data exploration and model fitting phase, and we have to be aware that the estimates may be biased because the study was not optimally designed with respect to these findings. It is important to always keep the original aim of the study in mind. Do not adjust the study question according to the data. We also recommend reporting what the model started with at the first iteration and describing the strategy and reasoning behind the model development process.
 
+Dies habe ich im Master ergänzt. 
+
 ```{r}
 # OK!!
 head(iris)
