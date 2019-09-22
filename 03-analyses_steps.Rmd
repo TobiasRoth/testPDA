@@ -75,7 +75,7 @@ If, while working through steps 1 to 8, possibly repeatedly, we came up with one
 ## Draw Conclusions  {#step10}
 Simulate values from the joint posterior distribution of the model parameters (sim or Stan). Use these samples to present parameter uncertainty, to obtain posterior distributions for predictions, probabilities of specific hypotheses, and derived quantities.
 
-## Further reading {-}
+## Further reading {-} OK
 - [R for Data Science by Garrett Grolemund and Hadley Wickham](http://r4ds.had.co.nz): Introduces the tidyverse framwork. It explains how to get data into R, get it into the most useful structure, transform it, visualise it and model it.
 
 
