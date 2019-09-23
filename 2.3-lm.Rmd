@@ -9,3 +9,5 @@ The model formula of a simple linear regression is:
 
 In other words: the observation y i stems from a normal distribution with b b mean y i and variance s 2 . The mean, y i , equals the sum of the intercept (b 0 ) and the product of the slope (b 1 ) and the predictor value, x i . Equivalently, the regression could be written as:
 
+Nun kommt ein Test.
+
