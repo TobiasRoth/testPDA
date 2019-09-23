@@ -5,9 +5,9 @@ Linear regression is the basis of a large part of applied statistical analysis. 
 
 Typical questions that can be answered using linear regression are: How does `y` change with changes in `x`? How is y predicted from `x`? An ordinary linear regression (i.e., one numeric `x` and one numeric `y` variable) can be represented by a scatterplot of `y` against `x`. We search for the line that ﬁts best and describe how the observations scatter around this regression line, that is, we describe the distribution of the residuals $\epsilon_i=y_i-\hat{y}_i$ \@ref(fig:test). 
 
-The model formula of a simple linear regression is:
+The model formula of a simple linear regression are:
 
 In other words: the observation y i stems from a normal distribution with b b mean y i and variance s 2 . The mean, y i , equals the sum of the intercept (b 0 ) and the product of the slope (b 1 ) and the predictor value, x i . Equivalently, the regression could be written as:
 
-Nun kommt ein Test.
+Test.
 
